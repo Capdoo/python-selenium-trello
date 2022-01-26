@@ -3,6 +3,8 @@ from selenium import webdriver
 import time
 
 TIEMPO_ESPERA = 3
+EMAIL = "mazher_2014@hotmail.com"
+PASSWORD = "passwordpruebas"
 
 driver = webdriver.Chrome('./chromedriver')
 #1. Ingresar al home
@@ -16,15 +18,15 @@ pass_box = driver.find_element_by_name("password")
 submit_button = driver.find_element_by_id("login")
 
 
-user_box.send_keys("mazher_2014@hotmail.com")
-pass_box.send_keys("passwordpruebas")
+user_box.send_keys(EMAIL)
+pass_box.send_keys(PASSWORD)
 submit_button.click()
 
 time.sleep(TIEMPO_ESPERA)
 
 
 pass_box_2 = driver.find_element_by_name("password")
-pass_box_2.send_keys("passwordpruebas")
+pass_box_2.send_keys(PASSWORD)
 submit_button_2 = driver.find_element_by_id("login-submit")
 submit_button_2.click()
 
